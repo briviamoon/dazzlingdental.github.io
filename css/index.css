@@ -1,0 +1,222 @@
+/* global variables */
+:root {
+	--main-background: #113f67;
+	--secondary-background: #38598b;
+	--tertiary-background: #a2a8d3;
+	--last-background: #e7eaf6;
+	--small-font: 1rem;
+	--normal-font: 1.25rem;
+	--medium-font: 1.5rem;
+	--large-font: 2rem;
+	--big-font: 3rem;
+	--color: #e7eaf6;
+	--font: sans-serif;
+	--gap: 2rem;
+}
+
+/* Global classes */
+section {
+	width: 100%;
+	height: fit-content;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+/* document traits */
+
+* {
+	box-sizing: border-box;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	background-color: var--last-background;
+}
+
+
+/* Header */
+.header {
+	width: 100%;
+	height: 60px;
+	position: relative;
+	background-color: var(--main-background);
+	color: var(--color);
+	font: var(--font);
+}
+
+.logo {
+	position: absolute;
+	top: 15px;
+	font-size: var(--medium-font);
+	left: 5px;
+	right: 5px;
+}
+
+.navbar {
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-left: 20%;
+	padding: 17px;
+}
+
+.sections {
+	display: flex;
+}
+
+.sections-list {
+	text-decoration: none;
+	list-style: none;
+	margin: 0.3em;
+}
+
+.sections-list a:hover {
+	cursor: pointer;
+	transform: scale(1.5);
+}
+
+.sections-list a {
+	text-decoration: none;
+	color: var(--color);
+	cursor: pointer;
+}
+
+/* Hero Section */
+.hero-image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/dentures-blue-gloves.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--color);
+	position: relative;
+}
+
+.hero-text {
+	position: absolute;
+	top: 15%;
+	left: 5%;
+	right: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	font-size: var(--big-font);
+}
+
+.hero-text p {
+	font-size: var(--medium-font);
+}
+
+.hero-button {
+	width: 120px;
+	height: 60px;
+	border-radius: 98%;
+}
+
+.hero-button i,
+.hero-button p {
+	font-size: var(--small-font);
+}
+
+/* About Section */
+.about {
+	display: flex;
+	gap: var(--gap);
+	background-color: var(--last-background);
+	padding: 10%;
+	align-items: center;
+	height: 50vh;
+}
+
+.about-dazzling {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 10px;
+	height: auto;
+	width: 300px;
+}
+
+.dazzling {
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+}
+
+.dazzling-name {
+	font-size: var(--medium-font);
+}
+
+.dazzling-dan {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.dazzling-dan p {
+	font-size: var(--normal-font);
+}
+
+/* services */
+.services-wrapper {
+	position: relative;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.services-slider {
+	display: flex;
+	gap: var(--gap);
+	text-align: center;
+	padding: 5px;
+}
+
+.service-slide {
+	min-width: 250px;
+	box-sizing: border-box;
+	transition: transform 0.5s ease-in-out;
+}
+
+.service-image {
+	border-radius: 20px;
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.dot {
+	position: absolute;
+	bottom: 2%;
+	height: 10px;
+	width: 10px;
+	background-color: #bbb;
+	border-radius: 50%;
+	transition: background-color 0.6s ease;
+	padding: 2px;
+}
+
+.left {
+	left: 45%;
+}
+.middle {
+	left: 50%;
+}
+.right {
+	left: 55%;
+}
+
+.dot.active {
+	background-color: var(--secondary-background);
+}
