@@ -71,7 +71,7 @@ section {
 .sections-list {
 	text-decoration: none;
 	list-style: none;
-	margin: 0.3em;
+	margin: 0.4rem;
 }
 
 .sections-list a:hover {
@@ -83,6 +83,13 @@ section {
 	text-decoration: none;
 	color: var(--color);
 	cursor: pointer;
+}
+
+/* In Mobile View */
+@media only screen and (max-width: 600px) {
+	.logo {
+		font-size: var(--small-font);
+	}
 }
 
 /* Hero Section */
@@ -128,6 +135,15 @@ section {
 	font-size: var(--small-font);
 }
 
+@media screen and (max-width: 600px)  {
+	.hero-button {
+		position: absolute;
+		top: 60%;
+		width: 100px;
+		height: 70px;
+	}
+}
+
 /* About Section */
 .about {
 	display: flex;
@@ -168,6 +184,17 @@ section {
 	font-size: var(--normal-font);
 }
 
+/* about mobile */
+@media only screen and (max-width: 600px) {
+	.about-dazzling {
+		height: auto;
+		width: 200px;
+	}
+	.dazzling {
+		width: 150px;
+		height: 150px;
+	}
+}
 /* services */
 .services-wrapper {
 	position: relative;
@@ -210,9 +237,11 @@ section {
 .left {
 	left: 45%;
 }
+
 .middle {
 	left: 50%;
 }
+
 .right {
 	left: 55%;
 }
