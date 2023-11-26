@@ -20,10 +20,11 @@ section {
 	height: fit-content;
 }
 
-.sticky {
-	position: fixed;
+#header.sticky {
+	position: sticky;
 	top: 0;
-	width: 100%;
+	z-index: 10;
+	padding: 2px;
 }
 
 /* document traits */
@@ -36,12 +37,10 @@ section {
 	background-color: var--last-background;
 }
 
-
 /* Header */
-.header {
+#header {
 	width: 100%;
 	height: 60px;
-	position: relative;
 	background-color: var(--main-background);
 	color: var(--color);
 	font: var(--font);
@@ -53,6 +52,7 @@ section {
 	font-size: var(--medium-font);
 	left: 5px;
 	right: 5px;
+	font-style: italic;
 }
 
 .navbar {
@@ -88,7 +88,20 @@ section {
 /* In Mobile View */
 @media only screen and (max-width: 600px) {
 	.logo {
-		font-size: var(--small-font);
+		font-size: var(--normal-font);
+		text-shadow: #38598b;
+		text-wrap: wrap;
+		left: 155px;
+		top: 8px;
+	}
+
+	#header {
+		height: 70px;
+	}
+
+	.navbar {
+		padding-top: 30px;
+		padding-right: 100px;
 	}
 }
 
@@ -135,7 +148,7 @@ section {
 	font-size: var(--small-font);
 }
 
-@media screen and (max-width: 600px)  {
+@media screen and (max-width: 600px) {
 	.hero-button {
 		position: absolute;
 		top: 60%;
@@ -186,15 +199,16 @@ section {
 
 /* about mobile */
 @media only screen and (max-width: 600px) {
-	.about-dazzling {
-		height: auto;
-		width: 200px;
-	}
 	.dazzling {
 		width: 150px;
 		height: 150px;
 	}
+
+	.dazzling-dan p {
+		font-size: var(--small-font);
+	}
 }
+
 /* services */
 .services-wrapper {
 	position: relative;
@@ -211,13 +225,12 @@ section {
 
 .service-slide {
 	min-width: 250px;
-	box-sizing: border-box;
 	transition: transform 0.5s ease-in-out;
 }
 
 .service-image {
 	border-radius: 20px;
-	width: 100%;
+	width: 250px;
 	height: 300px;
 	object-fit: cover;
 	object-position: center;
@@ -248,4 +261,14 @@ section {
 
 .dot.active {
 	background-color: var(--secondary-background);
+}
+
+@media only screen and (max-width: 600px) {
+	.services-wrapper {
+		max-height: 300px;
+	}
+
+	.service-image {
+		height: 200px;
+	}
 }

@@ -1,7 +1,7 @@
 /**
  * get the header's id
  */
-const header = document.getElementById("Header");
+const header = document.getElementById('header');
 const sticky = header.offsetTop;
 
 /**
@@ -9,12 +9,17 @@ const sticky = header.offsetTop;
  */
 
 function stickTheHeader() {
-	if (window.pageYOffset > sticky) {
-		header.classList.add("sticky");
+	console.log('scrolling');
+	if (window.scrollY > sticky) {
+		header.classList.add('sticky');
+		console.log('making sticky');
 	}
 	else {
-		header.classList.remove("sticky");
+		header.classList.remove('sticky');
+		console.log('removing sticky');
 	}
 }
 
-window.onscroll = function() {stickTheHeader()};
+window.onscroll = function () {
+	stickTheHeader();
+};
