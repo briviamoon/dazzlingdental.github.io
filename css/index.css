@@ -210,22 +210,26 @@ section {
 }
 
 /* services */
-.services-wrapper {
+.swiper-container {
 	position: relative;
 	overflow: hidden;
 	padding: 20px;
+	width: 100%;
 }
 
-.services-slider {
+.swiper-wrapper {
 	display: flex;
 	gap: var(--gap);
 	text-align: center;
 	padding: 5px;
 }
 
-.service-slide {
+.swiper-slide {
 	min-width: 250px;
 	transition: transform 0.5s ease-in-out;
+	background-size: cover;
+    background-position: center;
+    text-align: center;
 }
 
 .service-image {
@@ -264,7 +268,7 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
-	.services-wrapper {
+	.swiper-container {
 		max-height: 300px;
 	}
 

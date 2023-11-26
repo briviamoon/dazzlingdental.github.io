@@ -4,11 +4,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- index css -->
 	<link rel="stylesheet" href="css/index.css">
+	<!-- boxicons css -->
 	<link rel="stylesheet" href="boxi_icons/css/animations.css">
 	<link rel="stylesheet" href="boxi_icons/css/boxicons.css">
 	<link rel="stylesheet" href="boxi_icons/css/boxicons.min.css">
 	<link rel="stylesheet" href="boxi_icons/css/transformations.css">
+	<!-- Swiper css -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<title>Dazzling Dental</title>
 </head>
 
@@ -63,57 +67,75 @@
 
 	<!-- Services section -->
 	<section>
-		<div class="services-wrapper">
-			<div class="services-slider">
-				<div class="service-slide">
-					<img src="img/dental-procedure.jpg" alt="service" class="service-image">
-					<h3 class="dazzling-name"></h3>
-					<p class="service-description">description</p>
-				</div>
-				<div class="service-slide">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
 					<img src="img/dentures-print-square.jpg" alt="service" class="service-image">
 					<h3 class="dazzling-name"></h3>
 					<p class="service-description">description</p>
 				</div>
-				<div class="service-slide">
+				<div class="swiper-slide">
+					<img src="img/dentures-print-square.jpg" alt="service" class="service-image">
+					<h3 class="dazzling-name"></h3>
+					<p class="service-description">description</p>
+				</div>
+				<div class="swiper-slide">
 					<img src="img/pexels-cottonbro-studio-6528779.jpg" alt="service" class="service-image">
 					<h3 class="dazzling-name"></h3>
 					<p class="service-description">description</p>
 				</div>
-				<div class="service-slide">
+				<div class="swiper-slide">
 					<img src="img/pexels-cottonbro-studio-6528782.jpg" alt="service" class="service-image">
 					<h3 class="dazzling-name"></h3>
 					<p class="service-description">description</p>
 				</div>
-				<div class="service-slide">
+				<div class="swiper-slide">
 					<img src="img/dental-procedure.jpg" alt="service" class="service-image">
 					<h3 class="dazzling-name"></h3>
 					<p class="service-description">description</p>
 				</div>
-				<div class="service-slide">
+				<div class="swiper-slide">
 					<img src="img/dentures-print-square.jpg" alt="service" class="service-image">
 					<h3 class="dazzling-name"></h3>
 					<p class="service-description">description</p>
 				</div>
-				<div class="service-slide">
+				<div class="swiper-slide">
 					<img src="img/pexels-cottonbro-studio-6528779.jpg" alt="service" class="service-image">
 					<h3 class="dazzling-name"></h3>
 					<p class="service-description">description</p>
 				</div>
-				<div class="service-slide">
+				<div class="swiper-slide">
 					<img src="img/pexels-cottonbro-studio-6528782.jpg" alt="service" class="service-image">
 					<h3 class="dazzling-name"></h3>
 					<p class="service-description">description</p>
 				</div>
 			</div>
-			<i class="dot left"></i>
-			<i class="dot middle"></i>
-			<i class="dot right"></i>
+			<!-- Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Navigation -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
 		</div>
 	</section>
 
 	<script src="js/index.js"></script>
-	<script src="js/slider.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+	</script>
+
+
 </body>
 
 </html>
