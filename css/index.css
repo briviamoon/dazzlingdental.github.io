@@ -240,7 +240,9 @@ section {
 	object-position: center;
 }
 
-.dot {
+/* Old swipper manual build attemp */
+
+/* .dot {
 	position: absolute;
 	bottom: 2%;
 	height: 10px;
@@ -265,7 +267,7 @@ section {
 
 .dot.active {
 	background-color: var(--secondary-background);
-}
+} */
 
 @media only screen and (max-width: 600px) {
 	.swiper-container {
