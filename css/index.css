@@ -183,7 +183,8 @@ section {
 }
 
 .dazzling-name {
-	font-size: var(--medium-font);
+	font-size: 1.4rem;
+	margin-top: 10px;
 }
 
 .dazzling-dan {
@@ -210,6 +211,11 @@ section {
 }
 
 /* services */
+.Services-title{
+	font-size:var(--medium-font);
+	margin-top: 10px;
+}
+
 .swiper-container {
 	position: relative;
 	overflow: hidden;
@@ -277,4 +283,44 @@ section {
 	.service-image {
 		height: 200px;
 	}
+}
+
+
+/* Contact Section */
+.contact {
+	background-color: var(--last-background);
+	padding: 20px;
+}
+.email-title{
+	color: var(--secondary-background);
+	font-size:var(--large-font);
+}
+
+.Email-Dan{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height:auto;
+	box-shadow: var(--secondary-background);
+	padding: 20px;
+}
+
+.email-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+#email{
+	padding: 15px;
+	margin-top: 5px;
+	border: 1px solid var(--tertiary-background);
+	text-align: center;
+}
+
+.email-form button {
+	width: 250px;
+	margin-top: 10px;
+	background-color: var(--secondary-background);
+	color: var(--color);
+	height: 30px;
 }
